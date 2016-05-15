@@ -12,6 +12,7 @@ try {
         $('.infusion-field-input-container').removeAttr('style');
         $(':input.infusion-field-input-container').each(function (i) {
             var self = $(this);
+            console.log('input field: ' + self);
             var parentTR = self.closest('tr');
             var childTD = parentTR.children('td.infusion-field-label-container');
             var label = childTD.html();
@@ -31,5 +32,5 @@ try {
         }
     });
 } catch (e) {
-
+    console.log("Error: " + e); 
 }
