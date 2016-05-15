@@ -19,6 +19,15 @@ try {
             self.addClass('form-control').wrap('<div class="form-group" />').before(label);
             childTD.remove();
         });
+        $('textarea').each(function (i) {
+            var self = $(this);
+            console.log('input field: ' + self);
+            var parentTR = self.closest('tr');
+            var childTD = parentTR.children('td.infusion-field-label-container');
+            var label = childTD.html();
+            self.addClass('form-control').wrap('<div class="form-group" />').before(label);
+            childTD.remove();
+        });
         $('#inf_field_FirstName').attr({
             placeholder: 'Enter your first name'
         });
