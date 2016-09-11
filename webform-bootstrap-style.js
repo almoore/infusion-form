@@ -40,7 +40,12 @@ try {
         });
         $('.infusion-submit > button').addClass('btn btn-lg btn-primary')
             .css( {"background-color": "#66125d", "text-transform": "uppercase" })
-            .hover({"background": "#cd1f3e", "box-shadow": "0 0 15px rgba(0,0,0,0.2)"};
+            .hover(function(){
+                $(this).css({
+                    "background": "#cd1f3e",
+                    "box-shadow": "0 0 15px rgba(0,0,0,0.2)"
+                });
+            });
         if ($('#webformErrors').children().length) {
             $('#webformErrors').addClass('alert alert-danger');
         }
