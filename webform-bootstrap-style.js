@@ -37,7 +37,9 @@ try {
             type: 'email',
             placeholder: 'Enter Your Primary Email'
         });
-        $('.infusion-submit > button').addClass('btn btn-lg btn-primary');
+        $('.infusion-submit > button').addClass('btn btn-lg btn-primary')
+            .css({"width": "80%"});
+        $('.infusion-submit').css({"width": "100%", "text-align": "center"});
         if ($('#webformErrors').children().length) {
             $('#webformErrors').addClass('alert alert-danger');
         }
