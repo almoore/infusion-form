@@ -15,7 +15,7 @@ try {
             var parentTR = self.closest('tr');
             var childTD = parentTR.children('td.infusion-field-label-container');
             var label = childTD.html();
-            self.css("{width: 100%}");
+            self.css({"width": "100%"});
             self.addClass('form-control').wrap('<div class="form-group" />').before(label);
             childTD.remove();
         });
