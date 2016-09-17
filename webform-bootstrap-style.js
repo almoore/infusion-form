@@ -4,7 +4,7 @@
 try {
     jQuery(function ($) {
         $('title').text('Pretty Web Form');
-        $('body style').remove();
+        //$('body style').remove();
         $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">');
         $('head').append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />');
         $('form').eq(0).wrap('<div id="content" class="container" />');
@@ -12,7 +12,6 @@ try {
         $('.infusion-field-input-container').removeAttr('style');
         $(':input.infusion-field-input-container').each(function (i) {
             var self = $(this);
-            console.log('input field: ' + self);
             var parentTR = self.closest('tr');
             var childTD = parentTR.children('td.infusion-field-label-container');
             var label = childTD.html();
