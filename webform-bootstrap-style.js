@@ -15,15 +15,27 @@ try {
             var parentTR = self.closest('tr');
             var childTD = parentTR.children('td.infusion-field-label-container');
             var label = childTD.html();
+            self.css("{width: 100%}");
+            self.addClass('form-control').wrap('<div class="form-group" />').before(label);
+            childTD.remove();
+        });
+        $('textarea').each(function (i) {
+            var self = $(this);
+            var parentTR = self.closest('tr');
+            var childTD = parentTR.children('td.infusion-field-label-container');
+            var label = childTD.html();
             self.addClass('form-control').wrap('<div class="form-group" />').before(label);
             childTD.remove();
         });
         $('#inf_field_FirstName').attr({
-            placeholder: 'Enter your first name'
+            placeholder: 'Enter your First Name'
+        });
+        $('#inf_field_LastName').attr({
+            placeholder: 'Enter your Last Name'
         });
         $('#inf_field_Email').attr({
             type: 'email',
-            placeholder: 'Enter your primary email'
+            placeholder: 'Enter Your Primary Email'
         });
         $('.infusion-submit > button').addClass('btn btn-lg btn-primary');
         if ($('#webformErrors').children().length) {
