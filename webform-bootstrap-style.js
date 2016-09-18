@@ -3,12 +3,9 @@
  */
 try {
     jQuery(function ($) {
-        $('title').text('Pretty Web Form');
-        //$('body style').remove();
+        $('title').text('Web Form');
         $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">');
         $('head').append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />');
-        //$('form').eq(0).wrap('<div id="content" class="container" />');
-        //$('form').eq(0).wrap('<div class="col-xs-12 col-sm-6 col-sm-offset-3" />');
         $('.infusion-field-input-container').removeAttr('style');
         $(':input.infusion-field-input-container').each(function (i) {
             var self = $(this);
