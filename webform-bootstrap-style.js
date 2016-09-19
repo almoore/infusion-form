@@ -35,7 +35,6 @@ try {
             placeholder: 'Enter Your Primary Email'
         });
         $('#inf_field_Phone1').attr({
-            type: 'email',
             placeholder: 'Enter Your Primary Phone Number'
         });
         $('.infusion-submit > button').addClass('btn btn-lg btn-primary')
