@@ -3,21 +3,16 @@
  */
 try {
     jQuery(function ($) {
-        $('title').text('Web Form');
+        $('title').text('Pretty Web Form');
+        $('body style').remove();
         $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">');
         $('head').append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />');
+        $('form').eq(0).wrap('<div id="content" class="container" />');
+        $('form').eq(0).wrap('<div class="col-xs-12 col-sm-6 col-sm-offset-3" />');
         $('.infusion-field-input-container').removeAttr('style');
         $(':input.infusion-field-input-container').each(function (i) {
             var self = $(this);
-            var parentTR = self.closest('tr');
-            var childTD = parentTR.children('td.infusion-field-label-container');
-            var label = childTD.html();
-            self.css({"width": "100%"});
-            self.addClass('form-control').wrap('<div class="form-group" />').before(label);
-            childTD.remove();
-        });
-        $('textarea').each(function (i) {
-            var self = $(this);
+            console.log('input field: ' + self);
             var parentTR = self.closest('tr');
             var childTD = parentTR.children('td.infusion-field-label-container');
             var label = childTD.html();
@@ -35,6 +30,7 @@ try {
             placeholder: 'Enter Your Primary Email'
         });
         $('#inf_field_Phone1').attr({
+            type: 'email',
             placeholder: 'Enter Your Primary Phone Number'
         });
         $('.infusion-submit > button').addClass('btn btn-lg btn-primary')
